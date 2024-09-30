@@ -1,0 +1,50 @@
+---
+format: gfm
+---
+
+<!-- README.md is generated from README.qmd. Please edit that file -->
+
+When you render this QMD file (e.g., using `quarto render README.qmd`), it will generate a `.md` file formatted in GitHub Flavored Markdown, including the embedded Python code cells. Note that GitHub may not render the code execution output (like images) directly in the markdown view, so you might need to check the rendered output in a Jupyter notebook or an HTML preview for full functionality.
+
+```{python}
+# Set default settings for plotting (if using matplotlib or seaborn)
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set default styles
+sns.set(style="whitegrid")
+plt.rcParams['figure.figsize'] = (4, 4)  # Default figure size
+plt.rcParams['font.size'] = 12  # Default font size
+```
+
+
+
+```{python}
+# Display image using matplotlib
+from IPython.display import Image, display
+
+# Image path
+img_path = "assets/thumbnails/quarto-article-default-pdf.png"
+display(Image(filename=img_path, width=800, height=600))
+
+```
+
+
+Though if you are already using a QARTO Document the best case is to natively embbed images:
+
+
+![Description of the image](assets/thumbnails/quarto-article-default-pdf){width=800}
+
+
+
+
+### Explanation
+
+1. **YAML Header**: The document starts with a YAML header specifying the title and the desired output format as `gfm`.
+
+2. **Setting Options**: The first Python code chunk sets the default styles for plotting using libraries like Matplotlib and Seaborn.
+
+3. **Displaying Images**: The second Python code chunk utilizes the `IPython.display` library to display an image. 
+
+### Rendering the Document
+
